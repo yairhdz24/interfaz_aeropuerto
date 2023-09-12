@@ -1,0 +1,3 @@
+comando para convertir la interfaz en codigo python
+
+pyside2-uic maindindow.ui > ui_mainwindow.py
