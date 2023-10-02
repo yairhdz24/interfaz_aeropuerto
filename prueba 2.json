@@ -1,0 +1,14 @@
+[
+     {
+          "id": "21",
+          "origen": "GDL",
+          "destino": "MTY",
+          "peso": 10
+     },
+     {
+          "id": "21",
+          "origen": "OLA",
+          "destino": "COMO ESTAS",
+          "peso": 10
+     }
+]

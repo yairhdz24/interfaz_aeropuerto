@@ -6,101 +6,242 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>632</width>
-    <height>382</height>
+    <width>680</width>
+    <height>557</height>
    </rect>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+/* Estilo para el título del QGroupBox */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 10px; /* Ajusta el espaciado alrededor del título */
+}
+
+/* Estilo para Botón (QPushButton) */
+QPushButton {
+    background-color: #1e6091; /* Azul oscuro para el fondo */
+    color: white; /* Color del texto */
+    border: 2px solid #1e6091; /* Borde con color */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+}
+
+QPushButton:hover {
+    background-color: #2980b9; /* Color de fondo en hover */
+    border: 2px solid #2980b9; /* Borde en hover */
+}
+
+QSpinBox {
+    background-color: #ecf0f1; /* Color de fondo */
+    border: 1px solid #bdc3c7; /* Borde con color */
+    border-radius: 3px; /* Bordes redondeados */
+    padding: 2px; /* Espaciado interno */
+    color: #333; /* Color del texto */
+}
+
+QTabBar::tab {
+                background: #0074D9;
+                color: #FFFFFF;
+                padding: 5px 10px;
+                border: 1px solid #0056b3;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+ 
+QTabBar::tab:selected {
+                background: #0056b3;
+ }
+
+QMessageBox {
+    background-color: #FFFFFF; /* Color de fondo */
+}
+
+QMessageBox QLabel {
+    color: #333333; /* Color del texto del mensaje */
+}
+
+QMessageBox QPushButton {
+    background-color: #0074D9; /* Color del botón */
+    color: #FFFFFF; /* Color del texto del botón */
+    border: 1px solid #0056b3; /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno del botón */
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #0056b3; /* Cambiar color de fondo al pasar el ratón */
+}
+
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QFormLayout" name="formLayout">
+   <layout class="QGridLayout" name="gridLayout_3">
     <item row="0" column="0">
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="title">
-       <string>VUELO</string>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
       </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_7">
-         <property name="text">
-          <string>Origen:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1" colspan="2">
-        <widget class="QLineEdit" name="DESTINO_lineEdit"/>
-       </item>
-       <item row="5" column="2">
-        <widget class="QPushButton" name="mostar_pushButton">
-         <property name="text">
-          <string>Mostar</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="2">
-        <widget class="QSpinBox" name="PESO_spinBox"/>
-       </item>
-       <item row="5" column="1">
-        <widget class="QPushButton" name="agregar_inicio_pushButton">
-         <property name="text">
-          <string>Agregar Inicio</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>ID:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1" colspan="2">
-        <widget class="QLineEdit" name="ORIGEN_lineEdit"/>
-       </item>
-       <item row="3" column="0" colspan="2">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Peso:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_8">
-         <property name="text">
-          <string>Destino:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1" colspan="2">
-        <widget class="QLineEdit" name="ID_lineEdit"/>
-       </item>
-       <item row="5" column="0">
-        <widget class="QPushButton" name="agregar_final_pushButton">
-         <property name="text">
-          <string>Agregar al Final</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Agregar</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="vuelo_groupBox">
+          <property name="title">
+           <string>VUELO</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="3" column="0">
+            <widget class="QLabel" name="peso_label">
+             <property name="text">
+              <string>Peso:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QPushButton" name="agregar_final_pushButton">
+             <property name="text">
+              <string>Agregar final</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="origen_label">
+             <property name="text">
+              <string>Origen:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="destino_label">
+             <property name="text">
+              <string>Destino:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QLineEdit" name="destino_lineEdit"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="id_label">
+             <property name="text">
+              <string>ID:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QPushButton" name="agregar_inicio_pushButton">
+             <property name="text">
+              <string>Agregar inicio</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLineEdit" name="id_lineEdit"/>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="origen_lineEdit"/>
+           </item>
+           <item row="6" column="2">
+            <widget class="QPushButton" name="mostrar_pushButton">
+             <property name="text">
+              <string>Mostrar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QSpinBox" name="peso_spinBox"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPlainTextEdit" name="salida"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tabla</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0" colspan="3">
+         <widget class="QTableWidget" name="tabla"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="buscar_lineEdit">
+          <property name="placeholderText">
+           <string>ID de Vuelo</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="buscar_pushButton">
+          <property name="text">
+           <string>Buscar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="mostrar_tabla_pushButton">
+          <property name="text">
+           <string>Mostrar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QPlainTextEdit" name="salida"/>
     </item>
    </layout>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>632</width>
+     <width>680</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuArchivo"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

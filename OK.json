@@ -1,0 +1,14 @@
+[
+     {
+          "id": "01",
+          "origen": "RUSSIA",
+          "destino": "COREA",
+          "peso": 10
+     },
+     {
+          "id": "02",
+          "origen": "GDL",
+          "destino": "MEXICO",
+          "peso": 25
+     }
+]
